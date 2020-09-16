@@ -1,12 +1,12 @@
-def invalid_move?(board, index)
+def valid_move?(board, index)
   if index < 0
-    return true
-  elsif index > 8
-    return true
-  elsif position_taken?(board, index)
-    return true
-  else
     return false
+  elsif index > 8
+    return false
+  elsif position_taken?(board, index)
+    return false
+  else
+    return true
   end
 end
 
